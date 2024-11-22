@@ -2,7 +2,7 @@ import autocannon, { AutocannonResult } from 'autocannon';
 import { PassThrough } from 'stream';
 import dotenv from 'dotenv';
 
-dotenv.config(); // Carrega variáveis de ambiente
+dotenv.config(); 
 
 async function runLoadTest(
   url: string,
@@ -74,7 +74,7 @@ async function compareLoadTests(
   );
 }
 
-// Configurações de teste
+
 const url1 = 'http://localhost:3000/decks/sem-cache/my-decks';
 const url2 = 'http://localhost:3000/decks/com-cache/my-decks';
 const connections = 100;

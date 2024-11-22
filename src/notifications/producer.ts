@@ -5,7 +5,7 @@ console.log("Producer está rodando");
 
 
 export const sendNotification = async (message: string): Promise<void> => {
-  let connection: any; // Alterne para o tipo correto se disponível.
+  let connection: any; 
   let channel: any;
 
   try {

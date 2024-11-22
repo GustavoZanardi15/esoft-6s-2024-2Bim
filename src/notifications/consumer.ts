@@ -1,4 +1,3 @@
-// src/notifications/consumer.ts
 
 import { connectToRabbitMQ } from '../config/rabbitmq';
 

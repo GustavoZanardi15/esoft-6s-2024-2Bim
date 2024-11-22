@@ -1,22 +1,22 @@
 module.exports = {
-    preset: 'ts-jest', // Usa o preset ts-jest para lidar com TypeScript
-    testEnvironment: 'node', // Ambiente de teste baseado em Node.js
-    moduleFileExtensions: ['ts', 'js', 'json', 'node'], // Extensões de arquivos que o Jest deve processar
-    roots: ['<rootDir>/test'], // Onde os arquivos de teste estão localizados
+    preset: 'ts-jest', 
+    testEnvironment: 'node',
+    moduleFileExtensions: ['ts', 'js', 'json', 'node'], 
+    roots: ['<rootDir>/test'], 
     moduleNameMapper: {
-      '^@/(.*)$': '<rootDir>/src/$1',  // Mapear qualquer caminho começando com @/ para o diretório src
+      '^@/(.*)$': '<rootDir>/src/$1',  
       '^src/(.*)$': '<rootDir>/src/$1',
     },
     transform: {
-      '^.+\\.ts$': ['ts-jest', { tsconfig: 'tsconfig.json' }], // Transforma arquivos TypeScript usando ts-jest
+      '^.+\\.ts$': ['ts-jest', { tsconfig: 'tsconfig.json' }], 
     },
     testMatch: [
-      '**/test/**/*.spec.ts', // Onde o Jest deve procurar os arquivos de teste
+      '**/test/**/*.spec.ts', 
     ],
-    collectCoverage: true, // Coleta de cobertura de testes
-    coverageDirectory: './coverage', // Diretório onde o Jest vai armazenar os resultados de cobertura
-    coverageProvider: 'v8', // Usando o V8 para calcular a cobertura
-    setupFiles: ['dotenv/config'], // Carrega variáveis de ambiente de um arquivo .env, caso necessário
-    transformIgnorePatterns: ['node_modules/(?!(@nestjs|nestjs-query)/)'], // Para ignorar a transformação de certos pacotes
+    collectCoverage: true, 
+    coverageDirectory: './coverage',
+    coverageProvider: 'v8', 
+    setupFiles: ['dotenv/config'], 
+    transformIgnorePatterns: ['node_modules/(?!(@nestjs|nestjs-query)/)'],
   };
   
